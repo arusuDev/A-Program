@@ -3,7 +3,7 @@
 
 int main(void){
     int board[BOARD_SIZE][BOARD_SIZE] = {0};
-    int turn = 1;
+    int turn = BLACK;
     int win_side;
 
     printf("ŒÜ–Ú•À‚×ƒvƒƒOƒ‰ƒ€\n");
