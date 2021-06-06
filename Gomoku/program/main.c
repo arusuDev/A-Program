@@ -14,5 +14,6 @@ int main(void){
     }while(win_side == 0);
     
     print_board(board);
+    win_message(win_side);
     return 0;
 }

@@ -8,3 +8,4 @@ void print_board(int[BOARD_SIZE][BOARD_SIZE]);
 void hit_a_piece(int[BOARD_SIZE][BOARD_SIZE],int);
 void turn_change(int*);
 int judge(int[BOARD_SIZE][BOARD_SIZE],int);
+void win_message(int);

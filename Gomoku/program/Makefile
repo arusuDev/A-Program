@@ -1,4 +1,4 @@
-OBJS = main.o print_board.o hit_a_piece.o turn_change.o judge.o
+OBJS = main.o print_board.o hit_a_piece.o turn_change.o judge.o win_message.o
 CC = gcc
 
 # Compiler
@@ -14,4 +14,6 @@ hit_a_piece.o: hit_a_piece.c
 turn_change.o: turn_change.c
 	$(CC) -c $<
 judge.o: judge.c
+	$(CC) -c $<
+win_message.o: win_message.c
 	$(CC) -c $<
