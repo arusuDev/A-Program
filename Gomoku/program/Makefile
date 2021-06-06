@@ -17,3 +17,6 @@ judge.o: judge.c
 	$(CC) -c $<
 win_message.o: win_message.c
 	$(CC) -c $<
+
+clean:
+	rm *.o

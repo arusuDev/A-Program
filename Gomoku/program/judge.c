@@ -83,11 +83,29 @@ int rt_to_ld_judge(int board[BOARD_SIZE][BOARD_SIZE],int turn){
     return 0;
 }
 
-
+// ボードにコマがすべて埋まっているかどうかを判定する
+// return:
+// -2 : すべて埋まっている場合
+// 0 : 空きマスがある場合
+// input :
+// board : 盤面情報
+int checkboard(int board[BOARD_SIZE][BOARD_SIZE]){
+    int x,y,flag = -2;
+    for(y=0;y<BOARD_SIZE;y++){
+        for(x=0;x<BOARD_SIZE;x++){
+            if(board[y][x] == 0){
+                flag = 0;
+                break;
+            }
+        }
+    }
+    return flag;
+}
 // int judge(int board[][],int turn)
 // 勝敗判定する関数
 // return:
 // 0 : 勝敗が決定していない状態
+// -2 : 盤面が全て埋まってしまった状態
 // BLACK : 黒が勝利
 // WHITE : 白が勝利
 // input:
@@ -99,6 +117,9 @@ int judge(int board[BOARD_SIZE][BOARD_SIZE],int turn){
     int v = vertical_judge(board,turn);
     int lt_rd = lt_to_rd_judge(board,turn);
     int rt_ld = rt_to_ld_judge(board,turn);
+    if(checkboard(board) == -2){
+        return -2;
+    }
     if(h != 0 || v != 0 || lt_rd != 0 || rt_ld != 0){
         return turn;
     }else{

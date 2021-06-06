@@ -1,5 +1,5 @@
-#define BOARD_SIZE 13
-#define WIN_LENGTH 5
+#define BOARD_SIZE 4
+#define WIN_LENGTH 4
 #define BLACK 1
 #define WHITE -1
 
