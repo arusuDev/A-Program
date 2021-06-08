@@ -8,6 +8,7 @@ using UnityEngine;
 /// </summary>
 public partial class game: MonoBehaviour
 {
+    // constでBlack,White,Noneを定義
     private const int Black = 1;
     private const int White = -1;
     private const int None = 0;
@@ -22,6 +23,6 @@ public partial class game: MonoBehaviour
     // ボード上の判定用変数
     private int[,] Board;
     // 現在のターンがどっちかを示す関数
-    int Turn = Black;
+    int currentPlayer = Black;
 
 }

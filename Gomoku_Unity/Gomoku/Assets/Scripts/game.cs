@@ -15,6 +15,6 @@ public partial class game : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        ClickObserver();
     }
 }
