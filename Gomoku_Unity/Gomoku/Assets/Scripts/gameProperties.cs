@@ -8,15 +8,13 @@ using UnityEngine;
 /// </summary>
 public partial class game: MonoBehaviour
 {
-    enum Pieces
-    {
-        None = 0,
-        Black = 1,
-        White = -1
-    }
+    private const int Black = 1;
+    private const int White = -1;
+    private const int None = 0;
+
     
     // ボードのサイズを指定します。
-    public int BoardSize;
+    public int BoardSize = 9;
     // ボードを作成するためのオブジェクトを指定します。
     public GameObject[] BoardObjects = new GameObject[2];
     // 碁石を指定します。
@@ -24,6 +22,6 @@ public partial class game: MonoBehaviour
     // ボード上の判定用変数
     private int[,] Board;
     // 現在のターンがどっちかを示す関数
-    int Turn = Pieces.Black;
+    int Turn = Black;
 
 }
