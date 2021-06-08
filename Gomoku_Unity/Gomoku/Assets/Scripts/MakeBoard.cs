@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MakeBoard : MonoBehaviour
+public partial class game : MonoBehaviour
 {
     public GameObject[] board = new GameObject[2];
     public int board_size;
     // Start is called before the first frame update
-    void Start()
+    void MakeBoard()
     {
         for(int i=-1;i<board_size+1;i++)
             Instantiate(board[1],new Vector3(-0.5f,0.0f,i*0.5f), Quaternion.identity);
@@ -21,11 +21,5 @@ public class MakeBoard : MonoBehaviour
         for(int i=-1;i<board_size+1;i++)
             Instantiate(board[1],new Vector3(0.5f*board_size,0.0f,i*0.5f), Quaternion.identity);
             
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
