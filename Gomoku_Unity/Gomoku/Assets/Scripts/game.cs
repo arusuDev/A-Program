@@ -9,7 +9,7 @@ public partial class game : MonoBehaviour
 {
     void Start()
     {
-        MakeBoard();
+        Init();
     }
 
     // Update is called once per frame
