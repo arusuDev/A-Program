@@ -11,16 +11,16 @@ public partial class game : MonoBehaviour
     void MakeBoard()
     {
         for(int i=-1;i<BoardSize+1;i++)
-            Instantiate(BoardObjects[1],new Vector3(-0.5f,0.0f,i*0.5f), Quaternion.identity);
+            Instantiate(BoardObjects[1],new Vector3(-1.0f,0.0f,i*1.0f), Quaternion.identity);
         for(int i=0;i<BoardSize;i++){
-            Instantiate(BoardObjects[1],new Vector3(0.5f*i,0.0f,-0.5f), Quaternion.identity);
+            Instantiate(BoardObjects[1],new Vector3(1.0f*i,0.0f,-1.0f), Quaternion.identity);
             for(int j=0;j<BoardSize;j++){
-                Instantiate(BoardObjects[0],new Vector3(i*0.5f,0.0f,j*0.5f),Quaternion.identity);
+                Instantiate(BoardObjects[0],new Vector3(i*1.0f,0.0f,j*1.0f),Quaternion.identity);
             }
-            Instantiate(BoardObjects[1],new Vector3(0.5f*i,0.0f,BoardSize*0.5f), Quaternion.identity);
+            Instantiate(BoardObjects[1],new Vector3(1.0f*i,0.0f,BoardSize*1.0f), Quaternion.identity);
         }
         for(int i=-1;i<BoardSize+1;i++)
-            Instantiate(BoardObjects[1],new Vector3(0.5f*BoardSize,0.0f,i*0.5f), Quaternion.identity);
+            Instantiate(BoardObjects[1],new Vector3(1.0f*BoardSize,0.0f,i*1.0f), Quaternion.identity);
             
     }
 }
