@@ -25,8 +25,9 @@ public partial class game : MonoBehaviour
             // マウスのポジションからRayを投げて何かにあたったらhitに入れる。
             if(Physics.Raycast(ray,out hit)){
                 // x,yの値を取得する
-                int x = (int)hit.collider.gameObject.transform.position.x;
-                int z = (int)hit.collider.gameObject.transform.position.z;
+                int x = (int) (hit.collider.gameObject.transform.position.x + 0.5f);
+                int z = (int) (hit.collider.gameObject.transform.position.z + 0.5f);
+                
 
                 Debug.Log(x+","+z);
             }
