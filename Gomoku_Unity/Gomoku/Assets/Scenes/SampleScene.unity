@@ -290,7 +290,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.70710665, y: -0, z: -0, w: 0.70710695}
-  m_LocalPosition: {x: 4.085952, y: 10.819651, z: 4.2617087}
+  m_LocalPosition: {x: 4.085952, y: 11.93, z: 5.77}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -325,7 +325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f5a1f19e50af37478e03bc0b7b9b570, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BoardSize: 8
+  BoardSize: 12
   BoardObjects:
   - {fileID: 8632426186875197061, guid: be1b6cab6fea7964f8d5d55d352d9c2e, type: 3}
   - {fileID: 5954689171088736908, guid: 48d6bfded439bda4190596c84b9b4812, type: 3}

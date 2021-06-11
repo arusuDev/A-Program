@@ -24,5 +24,6 @@ public partial class game: MonoBehaviour
     private int[,] Board;
     // 現在のターンがどっちかを示す関数
     int currentPlayer = Black;
+    
 
 }
