@@ -11,6 +11,8 @@ public partial class game : MonoBehaviour
         // Board変数を二次元配列で確保し、0でクリアする。
         Board = new int[BoardSize+1,BoardSize+1];
         MakeBoard();
+        // 作成時は-1で、作成後は+1で。
+        BoardSize++;
         CameraGet();
     }
 }
