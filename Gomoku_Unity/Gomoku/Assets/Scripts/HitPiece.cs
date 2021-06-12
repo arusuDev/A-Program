@@ -16,17 +16,19 @@ public partial class game : MonoBehaviour
     /// </summary>
     void CameraGet(){
         cameraObject = GameObject.Find("Main Camera").GetComponent<Camera>();
+        cameraObject.transform.position = new Vector3((BoardSize-1)/2.0f,BoardSize,(BoardSize-1)/2.0f);
     }
 
     void ClickObserver(){
         if(Input.GetMouseButtonDown(0)){
-            //マウスのポジションを取得してRayに
-            Ray ray = cameraObject.ScreenPointToRay(Input.mousePosition);
+            Vector3 offset = new Vector3(Screen.height/(BoardSize+2)/2.0f,Screen.height/(BoardSize+2)/2.0f,0.0f);
+            Vector3 mp= Input.mousePosition;
+            //マウスのポジションにoffsetを加算してRayに
+            Ray ray = cameraObject.ScreenPointToRay(mp + offset);
             // Debug.Log(Input.mousePosition);
             // マウスのポジションからRayを投げて何かにあたったらhitに入れる。
             if(Physics.Raycast(ray,out hit)){
                 // x,yの値を取得する
-                // ここにoffsetを入力すると取得したオブジェクトのxを指定するから小数点は無視される。
                 int x = (int) (hit.collider.gameObject.transform.position.x);
                 int z = (int) (hit.collider.gameObject.transform.position.z);
 
