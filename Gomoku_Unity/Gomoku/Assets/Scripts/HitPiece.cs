@@ -33,7 +33,24 @@ public partial class game : MonoBehaviour
                 int z = (int) (hit.collider.gameObject.transform.position.z);
 
                 Debug.Log(x+","+z);
-                
+                // 指定した座標に既に駒がある場合は、break
+                if(Board[x,z] != None){
+                    return;
+                }else{
+                    // ボードに打つ。
+                    Board[x,z] = currentPlayer;
+                    if(currentPlayer == Black)
+                        Instantiate(GoPieces[0],new Vector3(x-0.5f,0.75f,z-0.5f),Quaternion.identity);
+                    else
+                        Instantiate(GoPieces[1], new Vector3(x-0.5f, 0.75f, z-0.5f), Quaternion.identity);
+                    //ターンを相手に渡す。
+                    currentPlayer *= -1;
+                    if(currentPlayer == Black){
+                        Debug.Log("黒番です。");
+                    }else{
+                        Debug.Log("白番です。");
+                    }
+                }
             }
         }
     }

@@ -9,7 +9,7 @@ public partial class game : MonoBehaviour
     /// </summary>
     void Init(){
         // Board変数を二次元配列で確保し、0でクリアする。
-        Board = new int[BoardSize,BoardSize];
+        Board = new int[BoardSize+1,BoardSize+1];
         MakeBoard();
         CameraGet();
     }
