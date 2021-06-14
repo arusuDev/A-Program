@@ -9,9 +9,14 @@ public partial class game : MonoBehaviour
     /// </summary>
     void Init(){
         param = GameObject.Find("ScoreData");
-        dataCarry = param.GetComponent<DataCarry>();
-        BoardSize = (int)dataCarry.bsize;
-        WinLength = (int)dataCarry.cwin;
+
+        // ScoreDataがない場合、Scriptにアタッチされている値を直接使うようにする
+        // MainSceneのデバッグ用
+        if(param != null){
+            dataCarry = param.GetComponent<DataCarry>();
+            BoardSize = (int)dataCarry.bsize;
+            WinLength = (int)dataCarry.cwin;
+        }
 
         // Board変数を二次元配列で確保し、0でクリアする。
         Board = new int[BoardSize+1,BoardSize+1];

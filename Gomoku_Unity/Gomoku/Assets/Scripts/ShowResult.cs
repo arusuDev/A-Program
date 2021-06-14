@@ -23,10 +23,4 @@ public class ShowResult : MonoBehaviour
         // それを回避するためのオブジェクト破棄
         Destroy(result);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
