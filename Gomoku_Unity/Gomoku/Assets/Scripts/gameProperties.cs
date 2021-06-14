@@ -14,7 +14,9 @@ public partial class game: MonoBehaviour
     private const int None = 0;
     private const int Draw = -2;
 
+    // 共有データ
     private GameObject param;
+    private DataCarry dataCarry;
     // ボードのサイズを指定します。
     public int BoardSize = 9;
     // 勝利に必要な長さを指定します。

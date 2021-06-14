@@ -44,8 +44,9 @@ public partial class game : MonoBehaviour
                     else
                         Instantiate(GoPieces[1], new Vector3(x-0.5f, 0.75f, z-0.5f), Quaternion.identity);
                     //ターンを相手に渡す。
+                    int winner = judge();
                     // 勝敗判定
-                    switch (judge())
+                    switch (winner)
                     {
                         case Black:
                             Debug.Log("黒の勝ち！");
@@ -59,6 +60,10 @@ public partial class game : MonoBehaviour
                         default:
                             break;
                     }
+                    if(winner != 0){
+                        goResult(winner);
+                    }
+
                     currentPlayer *= -1;
                     if(currentPlayer == Black){
                         Debug.Log("黒番です。");
