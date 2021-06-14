@@ -965,8 +965,8 @@ MonoBehaviour:
   - {fileID: 8632426186875197061, guid: be1b6cab6fea7964f8d5d55d352d9c2e, type: 3}
   - {fileID: 5954689171088736908, guid: 48d6bfded439bda4190596c84b9b4812, type: 3}
   GoPieces:
-  - {fileID: 4193721979257242543, guid: 0c69f5e6f6748de43b514eb125617872, type: 3}
-  - {fileID: 5719579888429239607, guid: 167496589e562c543ba6aa0a39aa88df, type: 3}
+  - {fileID: 853732701083455893, guid: b55d07bf2f0e25e4fbbbdef00421e0c8, type: 3}
+  - {fileID: 6830230689504621007, guid: a788d8e6c7f429a49b55b085bb0073cf, type: 3}
 --- !u!4 &1710787575
 Transform:
   m_ObjectHideFlags: 0
