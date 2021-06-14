@@ -19,6 +19,9 @@ public class ShowResult : MonoBehaviour
         }else{
             winmessage.text = "引き分け！";
         }
+        // 繰り返しプレーした時にScoreDataが複数生成されてしまうため、
+        // それを回避するためのオブジェクト破棄
+        Destroy(result);
     }
 
     // Update is called once per frame
