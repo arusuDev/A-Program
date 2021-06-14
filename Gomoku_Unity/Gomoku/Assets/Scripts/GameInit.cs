@@ -8,6 +8,11 @@ public partial class game : MonoBehaviour
     /// ボード情報の初期化・ボードの作成を行う関数
     /// </summary>
     void Init(){
+        param = GameObject.Find("ScoreData");
+        DataCarry a = param.GetComponent<DataCarry>();
+        BoardSize = (int)a.bsize;
+        WinLength = (int)a.cwin;
+
         // Board変数を二次元配列で確保し、0でクリアする。
         Board = new int[BoardSize+1,BoardSize+1];
         MakeBoard();
