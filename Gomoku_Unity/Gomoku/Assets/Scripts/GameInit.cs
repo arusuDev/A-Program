@@ -8,6 +8,7 @@ public partial class game : MonoBehaviour
     /// ボード情報の初期化・ボードの作成を行う関数
     /// </summary>
     void Init(){
+        // データを取る
         param = GameObject.Find("ScoreData");
 
         // ScoreDataがない場合、Scriptにアタッチされている値を直接使うようにする
@@ -24,5 +25,14 @@ public partial class game : MonoBehaviour
         // 作成時は-1で、作成後は+1で。
         BoardSize++;
         CameraGet();
+
+        showPieces = new GameObject[2];
+        showPieces[0] = GameObject.Find("Black_S");
+        showPieces[1] = GameObject.Find("White_S");
+
+        showPieces[1].SetActive(false);
+        if(showPieces == null){
+            Debug.Log("読み込みエラー");
+        }
     }
 }

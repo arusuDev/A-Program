@@ -14,6 +14,9 @@ public partial class game: MonoBehaviour
     private const int None = 0;
     private const int Draw = -2;
 
+    // 手番表示用のCanvas内にあるオブジェクト
+    private GameObject[] showPieces;
+
     // 共有データ
     private GameObject param;
     private DataCarry dataCarry;

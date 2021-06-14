@@ -67,8 +67,12 @@ public partial class game : MonoBehaviour
                     currentPlayer *= -1;
                     if(currentPlayer == Black){
                         Debug.Log("黒番です。");
+                        showPieces[0].SetActive(true);
+                        showPieces[1].SetActive(false);
                     }else{
                         Debug.Log("白番です。");
+                        showPieces[0].SetActive(false);
+                        showPieces[1].SetActive(true);
                     }
                 }
             }
