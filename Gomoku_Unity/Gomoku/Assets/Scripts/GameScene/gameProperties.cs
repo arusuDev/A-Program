@@ -33,5 +33,5 @@ public partial class game: MonoBehaviour
     // 現在のターンがどっちかを示す関数
     int currentPlayer = Black;
     
-
+    public GameObject winMessage;
 }

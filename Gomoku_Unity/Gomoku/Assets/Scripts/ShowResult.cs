@@ -7,7 +7,7 @@ public class ShowResult : MonoBehaviour
 {
     Text winmessage;
     // Start is called before the first frame update
-    void Start()
+    void OnEnable()
     {
         winmessage = this.GetComponent<Text>();
         GameObject result = GameObject.Find("ScoreData");
@@ -21,6 +21,6 @@ public class ShowResult : MonoBehaviour
         }
         // 繰り返しプレーした時にScoreDataが複数生成されてしまうため、
         // それを回避するためのオブジェクト破棄
-        Destroy(result);
+        // Destroy(result);
     }
 }
